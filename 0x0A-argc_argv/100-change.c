@@ -34,11 +34,11 @@ int main(int argc, char **argv)
 		{
 			for (i = 0; i < sizeof(cents[i]); i++)
 			{
-				   if (total >= cents[i])
-					      {
-						             count += total / cents[i];
-							            total = total % cents[i];
-								       }
+				if (total >= cents[i])
+				{
+					count += total / cents[i];
+					total = total % cents[i];
+				}
 			}
 		}
 		if (total == 1)
@@ -49,9 +49,6 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-
-
 	printf("%d\n", count);
 	return (0);
 }
-
